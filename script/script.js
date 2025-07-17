@@ -87,7 +87,7 @@ function playRandomSoundOnce() {
 resetSettings.onclick = () => {
   Swal.fire({
     title: "آیا مطمئنی؟",
-    text: "تمام گزینه‌ها، تم، صدا و تنظیمات ریست خواهند شد!",
+    text: "تمام چالش‌ها، تم، صدا و تنظیمات ریست خواهند شد!",
     icon: "warning",
     showCancelButton: true,
     confirmButtonText: "بله، ریست کن!",
@@ -277,7 +277,7 @@ function removeItem(index) {
 }
 
 function editItem(index) {
-  const newText = prompt("ویرایش گزینه:", items[index].text);
+  const newText = prompt("ویرایش چالش:", items[index].text);
   if (newText && !items.find(i => i.text === newText)) {
     items[index].text = newText;
     saveData();
@@ -293,8 +293,8 @@ function spinWheel() {
     playRandomSoundOnce();
     Swal.fire({
       width: "90%", // یا "80%" در موبایل
-      title: "هیچ گزینه‌ای وجود ندارد!",
-      text: "لطفاً ابتدا گزینه‌هایی اضافه کنید",
+      title: "هیچ چالش‌ای وجود ندارد!",
+      text: "لطفاً ابتدا چالش‌هایی اضافه کنید",
       icon: "warning",
       customClass: {
         popup: 'yekanBakh',
